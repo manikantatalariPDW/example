@@ -10,11 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		main2(args);
-		SpringApplication.run(DemoApplication.class, args);
-	}
-
-	public static void main2(String[] args) {
 		System.out.println("sample log message");
         Map<String, String> message = new HashMap<String, String>();
 		message.put("key1", "value1");
@@ -24,6 +19,7 @@ public class DemoApplication {
 		for(String key : message.keySet()){
 			System.out.println(key + " : " + message.get(key));
 		}
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }
